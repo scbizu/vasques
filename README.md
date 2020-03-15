@@ -1,6 +1,8 @@
 vasques
 ---
 
+[![Build Status](https://cloud.drone.io/api/badges/scbizu/vasques/status.svg)](https://cloud.drone.io/scbizu/vasques)
+
 A Go tool to convert `.json` files to `.proto`(mainly proto3)files.
 
 ## READ AT FIRST
