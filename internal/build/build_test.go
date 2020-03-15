@@ -58,11 +58,11 @@ func TestFlatten_ONLY_STRING(t *testing.T) {
 func TestFlatten_ONLY_INT(t *testing.T) {
 	raw := map[string]interface{}{
 		"AutoGenerate": map[string]interface{}{
-			"foo": 1,
+			"foo": float64(1),
 		},
 	}
 	got := flatten(raw)
-	f := map[string]pb.Field{"foo": pb.NewField(pb.KeywordTypeInt64, false, "foo")}
+	f := map[string]pb.Field{"foo": pb.NewField(pb.KeywordTypeInt32, false, "foo")}
 	m := map[string]map[string]pb.Field{
 		"AutoGenerate": f,
 	}
