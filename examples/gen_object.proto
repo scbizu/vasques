@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tests;
+
+message AutoGenerate {
+    Foo foo = 1; 
+}
+message Foo {
+    string foo_bar = 1; 
+    string foo_bat = 2; 
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package tests;
+
+message AutoGenerate {
+    repeated Foo  foo = 1; 
+}
+message Foo {
+    string baz = 1; 
+}

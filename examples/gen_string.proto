@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package tests;
+
+message AutoGenerate {
+string foo = 1; 
+}

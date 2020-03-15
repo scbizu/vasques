@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package tests;
+
+message AutoGenerate {
+    repeated int32  foo = 1; 
+}
