@@ -1,0 +1,149 @@
+syntax = "proto3";
+
+package tests;
+
+message AutoGenerate {
+    ObjectAttributes object_attributes = 1; 
+    repeated Labels  labels = 2; 
+    Changes changes = 3; 
+    string object_kind = 4; 
+    User user = 5; 
+    Project project = 6; 
+    Repository repository = 7; 
+}
+message Labels {
+    repeated Current  current = 1; 
+    repeated Previous  previous = 2; 
+}
+message Previous {
+    string description = 1; 
+    int32 id = 2; 
+    string created_at = 3; 
+    string updated_at = 4; 
+    int32 project_id = 5; 
+    string title = 6; 
+    string type = 7; 
+    int32 group_id = 8; 
+    string color = 9; 
+    bool template = 10; 
+}
+message Source {
+    string namespace = 1; 
+    string description = 2; 
+    string ssh_url = 3; 
+    string git_ssh_url = 4; 
+    string web_url = 5; 
+    string homepage = 6; 
+    string git_http_url = 7; 
+    string http_url = 8; 
+    string path_with_namespace = 9; 
+    string url = 10; 
+    int32 visibility_level = 11; 
+    string default_branch = 12; 
+    string name = 13; 
+}
+message ObjectAttributes {
+    int32 id = 1; 
+    string created_at = 2; 
+    bool work_in_progress = 3; 
+    LastCommit last_commit = 4; 
+    int32 source_project_id = 5; 
+    int32 author_id = 6; 
+    string merge_status = 7; 
+    int32 assignee_id = 8; 
+    string description = 9; 
+    Assignee assignee = 10; 
+    Target target = 11; 
+    string state = 12; 
+    Source source = 13; 
+    string url = 14; 
+    string source_branch = 15; 
+    int32 target_project_id = 16; 
+    string action = 17; 
+    string updated_at = 18; 
+    int32 iid = 19; 
+    string target_branch = 20; 
+    string title = 21; 
+}
+message Assignee {
+    string name = 1; 
+    string username = 2; 
+    string avatar_url = 3; 
+}
+message Target {
+    string namespace = 1; 
+    int32 visibility_level = 2; 
+    string description = 3; 
+    string url = 4; 
+    string http_url = 5; 
+    string git_http_url = 6; 
+    string path_with_namespace = 7; 
+    string default_branch = 8; 
+    string name = 9; 
+    string web_url = 10; 
+    string homepage = 11; 
+    string ssh_url = 12; 
+    string git_ssh_url = 13; 
+}
+message Changes {
+    Labels labels = 1; 
+    UpdatedById updated_by_id = 2; 
+    UpdatedAt updated_at = 3; 
+}
+message UpdatedAt {
+    string current = 1; 
+    string previous = 2; 
+}
+message Current {
+    int32 group_id = 1; 
+    string color = 2; 
+    bool template = 3; 
+    int32 id = 4; 
+    int32 project_id = 5; 
+    string created_at = 6; 
+    string updated_at = 7; 
+    string type = 8; 
+    string description = 9; 
+    string title = 10; 
+}
+message User {
+    string avatar_url = 1; 
+    string name = 2; 
+    string username = 3; 
+}
+message Project {
+    string name = 1; 
+    string path_with_namespace = 2; 
+    string git_ssh_url = 3; 
+    string default_branch = 4; 
+    string description = 5; 
+    string http_url = 6; 
+    string ssh_url = 7; 
+    string git_http_url = 8; 
+    int32 visibility_level = 9; 
+    string namespace = 10; 
+    string url = 11; 
+    int32 id = 12; 
+    string web_url = 13; 
+    string homepage = 14; 
+}
+message Author {
+    string email = 1; 
+    string name = 2; 
+}
+message UpdatedById {
+    int32 current = 1; 
+}
+message Repository {
+    string url = 1; 
+    string description = 2; 
+    string homepage = 3; 
+    string name = 4; 
+}
+message LastCommit {
+    string url = 1; 
+    Author author = 2; 
+    string id = 3; 
+    string message = 4; 
+    string timestamp = 5; 
+}

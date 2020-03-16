@@ -1,11 +1,10 @@
 package build
 
 import (
-	"fmt"
 	"math/big"
 	"strconv"
-	"strings"
 
+	"github.com/iancoleman/strcase"
 	"github.com/scbizu/vasques/internal/pb"
 	"github.com/scbizu/vasques/internal/reader"
 )
@@ -110,6 +109,5 @@ func flattenMessage(message string, src map[string]interface{}) map[string]map[s
 }
 
 func UppercaseName(n string) string {
-	bn := []byte(n)
-	return fmt.Sprintf("%s%s", strings.ToUpper(string(bn[0])), string(bn[1:]))
+	return strcase.ToCamel(n)
 }
