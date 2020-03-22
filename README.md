@@ -18,3 +18,26 @@ vasques chooses the [buf's styleguide](https://buf.build/docs/style-guide) as th
 |float|double||
 |boolean|bool||
 |Object|Message||
+
+## Install
+
+```
+# install from source
+$ go get github.com/scbizu/vasques #Can be used as a binary directly with your $GOPATH set
+# or outside $GOPATH/bin and GO111MODULE = ON
+# install homebrew-gomod at first
+$ brew install FiloSottile/gomod/brew-gomod
+$ brew gomod  github.com/scbizu/vasques
+```
+
+or download the complied release from GitHub Release
+
+## Usage 
+
+```
+$ vasques --json path/to/your_json_file.json   -d path/to/your_proto_file.proto
+```
+
+Explore more example json to proto files in the example directory
+
+
